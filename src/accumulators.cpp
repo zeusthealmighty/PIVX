@@ -32,9 +32,6 @@ uint32_t GetChecksum(const CBigNum &bnValue)
     return hash.Get32();
 }
 
-//testing 1 2 3
-
-
 bool GetAccumulatorValueFromChecksum(uint32_t nChecksum, bool fMemoryOnly, CBigNum& bnAccValue)
 {
     if (mapAccumulatorValues.count(nChecksum)) {
