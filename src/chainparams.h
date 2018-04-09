@@ -117,6 +117,8 @@ public:
     int Zerocoin_StartTime() const { return nZerocoinStartTime; }
     int Block_Enforce_Invalid() const { return nBlockEnforceInvalidUTXO; }
 
+    std::string FounderAdress() const { return founderAddress; } 
+
 protected:
     CChainParams() {}
 
@@ -173,6 +175,8 @@ protected:
     int nBlockFirstFraudulent;
     int nBlockLastGoodCheckpoint;
     int nBlockEnforceInvalidUTXO;
+
+    sdt::string founderAddress;
 };
 
 /**

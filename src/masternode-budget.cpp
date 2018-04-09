@@ -831,47 +831,37 @@ std::string CBudgetManager::GetRequiredPaymentsString(int nBlockHeight)
 
 CAmount CBudgetManager::GetTotalBudget(int nHeight)
 {
-    if (chainActive.Tip() == NULL) return 0;
-
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        CAmount nSubsidy = 500 * COIN;
-        return ((nSubsidy / 100) * 10) * 146;
-    }
-
+    if (chainActive.Tip() == NULL) return 0;  //IMPORTANT: we should check it later
+    
     //get block value and calculate from that
     CAmount nSubsidy = 0;
-    if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
-        nSubsidy = 50 * COIN;
-    } else if (nHeight <= 302399 && nHeight > Params().LAST_POW_BLOCK()) {
-        nSubsidy = 50 * COIN;
-    } else if (nHeight <= 345599 && nHeight >= 302400) {
-        nSubsidy = 45 * COIN;
-    } else if (nHeight <= 388799 && nHeight >= 345600) {
-        nSubsidy = 40 * COIN;
-    } else if (nHeight <= 431999 && nHeight >= 388800) {
-        nSubsidy = 35 * COIN;
-    } else if (nHeight <= 475199 && nHeight >= 432000) {
-        nSubsidy = 30 * COIN;
-    } else if (nHeight <= 518399 && nHeight >= 475200) {
-        nSubsidy = 25 * COIN;
-    } else if (nHeight <= 561599 && nHeight >= 518400) {
-        nSubsidy = 20 * COIN;
-    } else if (nHeight <= 604799 && nHeight >= 561600) {
-        nSubsidy = 15 * COIN;
-    } else if (nHeight <= 647999 && nHeight >= 604800) {
-        nSubsidy = 10 * COIN;
-    } else if (nHeight >= 648000) {
-        nSubsidy = 5 * COIN;
-    } else {
-        nSubsidy = 0 * COIN;
-    }
+    if(nHeight ==      0) {nSubsidy = 1500000;}
+    if(nHeight >=      1 && nHeight < 201) {nSubsidy = 0;}
+    if(nHeight >=    201 && nHeight < 4501) {nSubsidy = 1;}
+    if(nHeight >=   4501 && nHeight < 25501) {nSubsidy = 50;}
+    if(nHeight >=  25501 && nHeight < 35501) {nSubsidy = 45;}
+    if(nHeight >=  35501 && nHeight < 60001) {nSubsidy = 40;}
+    if(nHeight >=  60001 && nHeight < 100001) {nSubsidy = 35;}
+    if(nHeight >= 100001 && nHeight < 125001) {nSubsidy = 30;}
+    if(nHeight >= 125001 && nHeight < 150001) {nSubsidy = 25;}
+    if(nHeight >= 150001 && nHeight < 200001) {nSubsidy = 20;}
+    if(nHeight >= 200001 && nHeight < 250001) {nSubsidy = 15;}
+    if(nHeight >= 250001 && nHeight < 500001) {nSubsidy = 10;}
+    //halving every 500 000.
+    if(nHeight >= 500001) {
+    	long power = long((nHeight/500000)); 
+    	long dividend = 1;
+    	while(power > 0){
+    		power--;
+    		dividend *= 2;
+    	}
+    	nSubsidy = 10/(dividend);
+    } 
+    
+    nSubsidy = nSubsidy * COIN;
 
     // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
-    if (nHeight <= 172800) {
-        return 648000 * COIN;
-    } else {
-        return ((nSubsidy / 100) * 10) * 1440 * 30;
-    }
+    return ((nSubsidy / 100) * 10) * 1440 * 30;
 }
 
 void CBudgetManager::NewBlock()
