@@ -124,6 +124,7 @@ void CBudgetManager::CheckOrphanVotes()
 
 void CBudgetManager::SubmitFinalBudget()
 {
+    return;
     static int nSubmittedHeight = 0; // height at which final budget was submitted last time
     int nCurrentHeight;
 
