@@ -2153,6 +2153,14 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     return ret;
 }
 
+int64_t GetFounderReward(int nHeight)
+{
+    int halvingInterval = Params().GetConsensus().nSubsidyHalvingInterval;
+    if (nHeight < (halvingInterval * 5))
+        return 1 * COIN;
+    return 0 * COIN;
+}
+
 bool IsInitialBlockDownload()
 {
     LOCK(cs_main);
