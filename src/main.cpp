@@ -3165,7 +3165,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
 
     //PoW phase redistributed fees to miner. PoS stage destroys fees.
-    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
+    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);//SOLO SE USA PARA VERIFICAR QUE NO HAGA "OVERMINT"
     if (block.IsProofOfWork())
         nExpectedMint += nFees;
 
@@ -3250,6 +3250,22 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         auto it = mapZerocoinspends.find(txid);
         if (it != mapZerocoinspends.end())
             mapZerocoinspends.erase(it);
+    }
+    CAmount founderReward = GetFounderReward(pindex->nHeight);
+    if (founderReward > 0) {
+        CScript FOUNDER_SCRIPT = GetScriptForDestination(CBitcoinAddress(Params().FounderAddress()).Get());
+        bool FounderPaid = false;
+        const CTransaction& tx = block.vtx[0];
+        
+        BOOST_FOREACH (const CTxOut& output, tx.vout) {
+            if (output.scriptPubKey == FOUNDER_SCRIPT && output.nValue == founderReward) {
+                FounderPaid = true;
+                break;
+            }
+        }
+        if (!FounderPaid) {
+            return state.DoS(0, error("ConnectBlock(INFINEX): no founder reward"), REJECT_INVALID, "no-founder-reward");
+        }
     }
 
     return true;
