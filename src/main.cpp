@@ -2145,7 +2145,7 @@ int64_t GetBlockValue(int nHeight)
     
     return nSubsidy * COIN;
 }
-
+//popo
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
 {
     int64_t ret = (blockValue) + ((blockValue * 10)/90);
