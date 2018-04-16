@@ -247,6 +247,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 
 ///Founders
 int64_t GetFoundersPayment(int nHeight, int64_t blockValue);
+CAmount GetFounderReward(int nHeight);
 
 bool ActivateBestChain(CValidationState& state, CBlock* pblock = NULL, bool fAlreadyChecked = false);
 CAmount GetBlockValue(int nHeight);

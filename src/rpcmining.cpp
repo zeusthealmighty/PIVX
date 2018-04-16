@@ -346,6 +346,7 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
             "      \"flags\" : \"flags\"            (string) \n"
             "  },\n"
             "  \"coinbasevalue\" : n,               (numeric) maximum allowable input to coinbase transaction, including the generation award and transaction fees (in upiv)\n"
+            "  \"founderreward\" : {               (json object) required founder reward that must be included in the next block\n"
             "  \"coinbasetxn\" : { ... },           (json object) information for coinbase transaction\n"
             "  \"target\" : \"xxxx\",               (string) The hash target\n"
             "  \"mintime\" : xxx,                   (numeric) The minimum timestamp appropriate for next block time in seconds since epoch (Jan 1 1970 GMT)\n"
@@ -573,6 +574,15 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
     result.push_back(Pair("bits", strprintf("%08x", pblock->nBits)));
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight + 1)));
     result.push_back(Pair("votes", aVotes));
+    
+    CAmount founderReward = GetFounderReward(pindexPrev->nHeight+1);
+    if (founderReward > 0) {
+        UniValue founderRewardObj(UniValue::VOBJ);        
+        founderRewardObj.push_back(Pair("founderpayee", Params().FounderAddress().c_str()));        
+        founderRewardObj.push_back(Pair("amount", founderReward));
+        result.push_back(Pair("founderreward", founderRewardObj));        
+        result.push_back(Pair("founder_reward_enforced", true));
+    }
 
 
     if (pblock->payee != CScript()) {

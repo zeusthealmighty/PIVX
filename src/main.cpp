@@ -3270,6 +3270,13 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     return true;
 }
+CAmount GetFounderReward(int nHeight)
+{
+    int halvingInterval = Params().GetConsensus().nSubsidyHalvingInterval;
+    if (nHeight < (halvingInterval * 5))
+        return 1 * COIN;
+    return 0 * COIN;
+}
 
 enum FlushStateMode {
     FLUSH_STATE_IF_NEEDED,

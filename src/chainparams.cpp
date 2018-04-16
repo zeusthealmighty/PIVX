@@ -223,7 +223,7 @@ public:
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
 
         //Founders 
-        founderAddress = "comidaDePerroYeahSi"; 
+        founderAddress = "ComidaDePerro";
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const

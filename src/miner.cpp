@@ -415,6 +415,12 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
                 }
             }
         }
+        CAmount founderReward = GetFounderReward(nHeight);
+        if (founderReward > 0) {
+            CScript FOUNDER_SCRIPT = GetScriptForDestination(CBitcoinAddress(Params().FounderAddress()).Get());
+            txNew.vout[0].nValue -= founderReward;
+            txNew.vout.push_back(CTxOut(founderReward, CScript(FOUNDER_SCRIPT.begin(), FOUNDER_SCRIPT.end())));
+        }
 
         if (!fProofOfStake) {
             //Masternode and general budget payments
