@@ -3272,7 +3272,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 }
 CAmount GetFounderReward(int nHeight)
 {
-    int blockReward = getBlockValue(nHeight);
+    int blockReward = GetBlockValue(nHeight);
     int founderReward = blockReward *.1;
     return founderReward * COIN;
 }
