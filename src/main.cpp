@@ -3272,10 +3272,9 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 }
 CAmount GetFounderReward(int nHeight)
 {
-    int halvingInterval = Params().GetConsensus().nSubsidyHalvingInterval;
-    if (nHeight < (halvingInterval * 5))
-        return 1 * COIN;
-    return 0 * COIN;
+    int blockReward = getBlockValue(nHeight);
+    int founderReward = blockReward *.1;
+    return founderReward * COIN;
 }
 
 enum FlushStateMode {
