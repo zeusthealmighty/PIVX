@@ -146,7 +146,7 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 250 * COIN;
+        txNew.vout[0].nValue = 50 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
@@ -262,8 +262,8 @@ public:
         nBlockEnforceInvalidUTXO = 9902850; //Start enforcing the invalid UTXO's
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1523990417;
-        genesis.nNonce = 2521195;
+        genesis.nTime = 1524078704;
+        genesis.nNonce = 22018586;
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x26023ab353e633ca19ec8eacaeef40f27aa0310a5d0fb8e10d27cbc517b2c64b"));
         vFixedSeeds.clear();
