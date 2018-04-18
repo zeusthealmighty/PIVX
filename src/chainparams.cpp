@@ -104,7 +104,7 @@ public:
         pchMessageStart[1] = 0xc4;
         pchMessageStart[2] = 0xfd;
         pchMessageStart[3] = 0xe9;
-        vAlertPubKey = ParseHex("0000098d3ba6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50");
+        vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
         nDefaultPort = 4444;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // MRI starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -147,19 +147,23 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 250 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1524074508;
+        genesis.nTime = 1524078704;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 22985670;
+        genesis.nNonce = 22018586;
 
-        hashGenesisBlock = genesis.GetHash();
-
-         assert(hashGenesisBlock == uint256("0x7c95114109a6de45f2179a75d9cf6ace86449ccea3dce8451f04cae6fc13269b"));
-         assert(genesis.hashMerkleRoot == uint256("0x44bf39befe52a2c030258393bcd063fa7cdda78eb660c8fda2d2c4743454f79e"));
+          hashGenesisBlock = genesis.GetHash();
+        //printf("genesis.nTime = %u \n", genesis.nTime);
+        //printf("genesis.nNonce = %u \n", genesis.nNonce);
+        //printf("genesis.nVersion = %u \n", genesis.nVersion);
+        //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str()); //first this, then comment this line out and uncomment the one under.
+        //printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str()); //improvised. worked for me, to find merkle root
+         assert(hashGenesisBlock == uint256("0x26023ab353e633ca19ec8eacaeef40f27aa0310a5d0fb8e10d27cbc517b2c64b"));
+         assert(genesis.hashMerkleRoot == uint256("0x759231d966c09431e5098df49475bb79e09557fa32a84f589b1af11860491245"));
 
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed2.fuzzbawls.pw"));    // Secondary DNS Seeder from Fuzzbawls
@@ -236,7 +240,7 @@ public:
         pchMessageStart[1] = 0x76;
         pchMessageStart[2] = 0x65;
         pchMessageStart[3] = 0xba;
-        vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
+        vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
         nDefaultPort = 51474;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
@@ -261,8 +265,7 @@ public:
         genesis.nTime = 1523990417;
         genesis.nNonce = 2521195;
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x83a1021d28a95579b6723ddd9edb9c4431b27124669f17db54eef375d80b83bd"));
-
+        assert(hashGenesisBlock == uint256("0x26023ab353e633ca19ec8eacaeef40f27aa0310a5d0fb8e10d27cbc517b2c64b"));
         vFixedSeeds.clear();
         vSeeds.clear();
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx-testnet.seed.fuzzbawls.pw"));
@@ -334,7 +337,7 @@ public:
         nDefaultPort = 51476;
 
 
-        assert(hashGenesisBlock == uint256("0x9c15fce9a6d1b5fe69e39dd7c0db076f873f96b8abf3df455eb761b0a2f7596f"));
+        assert(hashGenesisBlock == uint256("0x26023ab353e633ca19ec8eacaeef40f27aa0310a5d0fb8e10d27cbc517b2c64b"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
