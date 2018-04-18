@@ -104,7 +104,7 @@ public:
         pchMessageStart[1] = 0xc4;
         pchMessageStart[2] = 0xfd;
         pchMessageStart[3] = 0xe9;
-        vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
+        vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
         nDefaultPort = 4444;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // MRI starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -141,24 +141,26 @@ public:
          *   vMerkleTree: e0028e
          */
 
-        const char* pszTimestamp = "The Miraculous Conclusion! Farewell, Goku! Until We Meet Again.";
+        const char* pszTimestamp = "The Miraculous Conclusion! Farewell, Goku! Until We Meet Again. Episode 131 DBS March 25 2018";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 250 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1524065997;
+        genesis.nTime = 1524070210;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 118893;
+        genesis.nNonce = 22985670;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00000840262482410761ab0b9924d2c4e7ef7ca1567fa4e0111f55457ec2705e"));
-        assert(genesis.hashMerkleRoot == uint256("609d634bff436bda54b32a1fe08ed62dbb4b889d209db5da9c70fd7f1095991a"));
+         //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+         //printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+         assert(hashGenesisBlock == uint256("0xa6e272a6bd45b0f91fce64beff069c6ad6ef4b1568db8827ac8f6ce08eee5b14"));
+         assert(genesis.hashMerkleRoot == uint256("0x759231d966c09431e5098df49475bb79e09557fa32a84f589b1af11860491245"));
 
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed2.fuzzbawls.pw"));    // Secondary DNS Seeder from Fuzzbawls
@@ -259,9 +261,10 @@ public:
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1523990417;
         genesis.nNonce = 2521195;
-
+         //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+         //printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000eae8dcd81fd375dfd083aeb6894adbb3fdb7a271c40dbd81a0b06af0035"));
+        assert(hashGenesisBlock == uint256("0x83e0891e2b699436835d785e5b334aa9f3c9be35b7459dccc97fb21b62e5368b"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -332,7 +335,10 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 51476;
-        assert(hashGenesisBlock == uint256("0x00000eae8dcd81fd375dfd083aeb6894adbb3fdb7a271c40dbd81a0b06af0035"));
+
+        //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+        //printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+        assert(hashGenesisBlock == uint256("0x48cb0450ed2f3969ed34feb3cf97d06ab3056a69f91f18f7e323d3d244579723"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
