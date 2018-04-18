@@ -2118,10 +2118,10 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-    int64_t nSubsidy = 0;
+    int64_t nSubsidy = 1;
 
-    if(nHeight ==      0) {nSubsidy = 1500000;}
-    if(nHeight >=      1 && nHeight < 201) {nSubsidy = 0;}
+    if(nHeight ==      1) {nSubsidy = 1500000;}
+    if(nHeight >=      2 && nHeight < 201) {nSubsidy = 0;}
     if(nHeight >=    201 && nHeight < 4501) {nSubsidy = 1;}
     if(nHeight >=   4501 && nHeight < 25501) {nSubsidy = 50;}
     if(nHeight >=  25501 && nHeight < 35501) {nSubsidy = 45;}
