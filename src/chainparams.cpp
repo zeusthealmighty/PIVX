@@ -152,13 +152,15 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1524069229;
+        genesis.nTime = 1524070210;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 21474032;
+        genesis.nNonce = 22985670;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00000ba028a2198261e899b4c75f1b46cbbc078a9500e620c11d7bc5d4f59563"));
-        assert(genesis.hashMerkleRoot == uint256("a2e8f9f7d01528015e820dd77db60598ce221eb9d0ee6a11c12bf27a84317232"));
+         //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+         //printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+         assert(hashGenesisBlock == uint256("0xa6e272a6bd45b0f91fce64beff069c6ad6ef4b1568db8827ac8f6ce08eee5b14"));
+         assert(genesis.hashMerkleRoot == uint256("0x759231d966c09431e5098df49475bb79e09557fa32a84f589b1af11860491245"));
 
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed2.fuzzbawls.pw"));    // Secondary DNS Seeder from Fuzzbawls
@@ -259,9 +261,10 @@ public:
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1523990417;
         genesis.nNonce = 2521195;
-
+         //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+         //printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000eae8dcd81fd375dfd083aeb6894adbb3fdb7a271c40dbd81a0b06af0035"));
+        assert(hashGenesisBlock == uint256("0x83e0891e2b699436835d785e5b334aa9f3c9be35b7459dccc97fb21b62e5368b"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -332,7 +335,10 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 51476;
-        assert(hashGenesisBlock == uint256("0x00000eae8dcd81fd375dfd083aeb6894adbb3fdb7a271c40dbd81a0b06af0035"));
+
+        //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+        //printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+        assert(hashGenesisBlock == uint256("0x48cb0450ed2f3969ed34feb3cf97d06ab3056a69f91f18f7e323d3d244579723"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
