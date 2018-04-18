@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The MRI developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -94,7 +94,8 @@ CBlockIndex* GetLastCheckpoint()
         const uint256& hash = i.second;
         BlockMap::const_iterator t = mapBlockIndex.find(hash);
         if (t != mapBlockIndex.end())
-            return t->second;
+        return NULL;
+            //return t->second;
     }
     return NULL;
 }

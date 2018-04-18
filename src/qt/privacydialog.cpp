@@ -80,7 +80,7 @@ PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent),
     ui->labelZsupplyText1000->setText(tr("Denom. <b>1000</b>:"));
     ui->labelZsupplyText5000->setText(tr("Denom. <b>5000</b>:"));
     
-    // PIVX settings
+    // MRI settings
     QSettings settings;
     if (!settings.contains("nSecurityLevel")){
         nSecurityLevel = 42;

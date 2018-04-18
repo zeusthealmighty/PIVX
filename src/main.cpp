@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The MRI developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -49,7 +49,7 @@ using namespace std;
 using namespace libzerocoin;
 
 #if defined(NDEBUG)
-#error "PIVX cannot be compiled without assertions."
+#error "MRI cannot be compiled without assertions."
 #endif
 
 // 6 comes from OPCODE (1) + vch.size() (1) + BIGNUM size (4)
@@ -81,7 +81,7 @@ bool fVerifyingBlocks = false;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
-unsigned int nStakeMinAge = 60 * 60;
+unsigned int nStakeMinAge = 10;
 int64_t nReserveBalance = 0;
 
 /** Fees smaller than this (in upiv) are considered zero fee (for relaying and mining)
@@ -2134,15 +2134,15 @@ int64_t GetBlockValue(int nHeight)
     if(nHeight >= 250001 && nHeight < 500001) {nSubsidy = 10;}
     //halving every 500 000.
     if(nHeight >= 500001) {
-    	long power = long((nHeight/500000)); 
+    	long power = long((nHeight/500000));
     	long dividend = 1;
     	while(power > 0){
     		power--;
     		dividend *= 2;
     	}
     	nSubsidy = 10/(dividend);
-    } 
-    
+    }
+
     return nSubsidy * COIN;
 }
 
@@ -2615,7 +2615,7 @@ bool DisconnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex
         const CTransaction& tx = block.vtx[i];
 
         /** UNDO ZEROCOIN DATABASING
-         * note we only undo zerocoin databasing in the following statement, value to and from PIVX
+         * note we only undo zerocoin databasing in the following statement, value to and from MRI
          * addresses should still be handled by the typical bitcoin based undo code
          * */
         if (tx.ContainsZerocoins()) {
@@ -2748,7 +2748,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("pivx-scriptch");
+    RenameThread("mirai-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2888,7 +2888,7 @@ bool RecalculatePIVSupply(int nHeightStart)
 
 bool ReindexAccumulators(list<uint256>& listMissingCheckpoints, string& strError)
 {
-    // PIVX: recalculate Accumulator Checkpoints that failed to database properly
+    // MRI: recalculate Accumulator Checkpoints that failed to database properly
     if (!listMissingCheckpoints.empty() && chainActive.Height() >= Params().Zerocoin_StartHeight()) {
         //uiInterface.InitMessage(_("Calculating missing accumulators..."));
         LogPrintf("%s : finding missing checkpoints\n", __func__);
@@ -3256,7 +3256,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         CScript FOUNDER_SCRIPT = GetScriptForDestination(CBitcoinAddress(Params().FounderAddress()).Get());
         bool FounderPaid = false;
         const CTransaction& tx = block.vtx[0];
-        
+
         BOOST_FOREACH (const CTxOut& output, tx.vout) {
             if (output.scriptPubKey == FOUNDER_SCRIPT && output.nValue == founderReward) {
                 FounderPaid = true;
@@ -4189,7 +4189,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
-        // PIVX
+        // MRI
         // It is entierly possible that we don't have enough data and this could fail
         // (i.e. the block could indeed be valid). Store the block for later consideration
         // but issue an initial reject message.
@@ -5626,7 +5626,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             return false;
         }
 
-        // PIVX: We use certain sporks during IBD, so check to see if they are
+        // MRI: We use certain sporks during IBD, so check to see if they are
         // available. If not, ask the first peer connected for them.
         bool fMissingSporks = !pSporkDB->SporkExists(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) &&
                 !pSporkDB->SporkExists(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) &&
