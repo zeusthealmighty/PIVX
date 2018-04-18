@@ -120,7 +120,7 @@ public:
         nMaxMoneyOut = 21000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 200;
+        nLastPOWBlock = 1;
         nModifierUpdateBlock = 615800;
         nZerocoinStartHeight = 863787;
         nZerocoinStartTime = 1508214600; // October 17, 2017 4:30:00 AM
@@ -152,16 +152,19 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1524067756;
+        genesis.nTime = 1524065997;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 3392091;
+        genesis.nNonce = 118893;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000ac8a1de5e7d85f3eb315a197c259579e98efcdd0a31208e04a0d534d666"));
-        assert(genesis.hashMerkleRoot == uint256("0x38636335343335363634613866393663626131666265333766623235663937313030323731626432643366356664663338316134663763336466323438653961"));
+        assert(hashGenesisBlock == uint256("00000840262482410761ab0b9924d2c4e7ef7ca1567fa4e0111f55457ec2705e"));
+        assert(genesis.hashMerkleRoot == uint256("609d634bff436bda54b32a1fe08ed62dbb4b889d209db5da9c70fd7f1095991a"));
 
-        vSeeds.push_back(CDNSSeedData("node1.miriad.io", "node1.miriad.io"));     // Primary DNS Seeder from Fuzzbawls
-        vSeeds.push_back(CDNSSeedData("node2.miriad.io", "node2.miriad.io"));    // Secondary DNS Seeder from Fuzzbawls
+        //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
+        //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed2.fuzzbawls.pw"));    // Secondary DNS Seeder from Fuzzbawls
+        //vSeeds.push_back(CDNSSeedData("coin-server.com", "coin-server.com"));         // Single node address
+        //vSeeds.push_back(CDNSSeedData("s3v3nh4cks.ddns.net", "s3v3nh4cks.ddns.net")); // Single node address
+        //vSeeds.push_back(CDNSSeedData("178.254.23.111", "178.254.23.111"));           // Single node address
 
         // mirai adresses start with 'M'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50);
@@ -238,9 +241,9 @@ public:
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // MRI: 1 day
-        nTargetSpacing = 1 * 60;  // MRI: 1 minute
-        nLastPOWBlock = 200;
+        nTargetTimespan = 1 * 60; // PIVX: 1 day
+        nTargetSpacing = 1 * 60;  // PIVX: 1 minute
+        nLastPOWBlock = 1;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
@@ -254,18 +257,18 @@ public:
         nBlockEnforceInvalidUTXO = 9902850; //Start enforcing the invalid UTXO's
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1454124731;
-        genesis.nNonce = 2402015;
+        genesis.nTime = 1523990417;
+        genesis.nNonce = 2521195;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
+        assert(hashGenesisBlock == uint256("0x00000eae8dcd81fd375dfd083aeb6894adbb3fdb7a271c40dbd81a0b06af0035"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "mirai-testnet.seed.fuzzbawls.pw"));
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "mirai-testnet.seed2.fuzzbawls.pw"));
-        vSeeds.push_back(CDNSSeedData("s3v3nh4cks.ddns.net", "s3v3nh4cks.ddns.net"));
-        vSeeds.push_back(CDNSSeedData("88.198.192.110", "88.198.192.110"));
+        //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx-testnet.seed.fuzzbawls.pw"));
+        //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx-testnet.seed2.fuzzbawls.pw"));
+        //vSeeds.push_back(CDNSSeedData("s3v3nh4cks.ddns.net", "s3v3nh4cks.ddns.net"));
+        //vSeeds.push_back(CDNSSeedData("88.198.192.110", "88.198.192.110"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet mirai addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet mirai script addresses start with '8' or '9'
@@ -323,13 +326,13 @@ public:
         nTargetTimespan = 24 * 60 * 60; // MRI: 1 day
         nTargetSpacing = 1 * 60;        // MRI: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1454124731;
+        genesis.nTime = 1523990417;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 12345;
+        genesis.nNonce = 2521195;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 51476;
-        assert(hashGenesisBlock == uint256("0x4f023a2120d9127b21bbad01724fdb79b519f593f2a85b60d3d79160ec5f29df"));
+        assert(hashGenesisBlock == uint256("0x00000eae8dcd81fd375dfd083aeb6894adbb3fdb7a271c40dbd81a0b06af0035"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
