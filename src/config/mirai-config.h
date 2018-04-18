@@ -1,9 +1,9 @@
 /* src/config/mirai-config.h.  Generated from mirai-config.h.in by configure.  */
 /* src/config/mirai-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef PIV_CONFIG_H
+#ifndef MRI_CONFIG_H
 
-#define PIV_CONFIG_H
+#define MRI_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -54,7 +54,7 @@
 #define HAVE_BOOST_THREAD /**/
 
 /* define if the Boost::Unit_Test_Framework library is available */
-#define HAVE_BOOST_UNIT_TEST_FRAMEWORK /**/
+/* #undef HAVE_BOOST_UNIT_TEST_FRAMEWORK */
 
 /* Define this symbol if the consensus lib has been built */
 /* #undef HAVE_CONSENSUS_LIB */
@@ -287,10 +287,10 @@
 #define PACKAGE_BUGREPORT "www.mirai.org"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Pivx Core"
+#define PACKAGE_NAME "Mirai Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Pivx Core 3.0.99"
+#define PACKAGE_STRING "Mirai Core 3.0.99"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "mirai"
@@ -330,7 +330,7 @@
 /* #undef USE_COVERAGE */
 
 /* Define if dbus support should be compiled in */
-#define USE_DBUS 1
+/* #undef USE_DBUS */
 
 /* Define if QR support should be compiled in */
 /* #undef USE_QRCODE */
@@ -362,4 +362,4 @@
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
-#endif //PIV_CONFIG_H
+#endif //MRI_CONFIG_H
