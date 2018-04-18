@@ -329,9 +329,9 @@ public:
         nTargetTimespan = 24 * 60 * 60; // MRI: 1 day
         nTargetSpacing = 1 * 60;        // MRI: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1523990417;
-        genesis.nBits = 0x207fffff;
-        genesis.nNonce = 2521195;
+        genesis.nTime = 1524078704;
+        genesis.nBits = 0x1e0ffff0;
+        genesis.nNonce = 22018586;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 51476;
