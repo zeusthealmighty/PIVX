@@ -115,7 +115,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // MRI: 1 day
         nTargetSpacing = 1 * 60;  // MRI: 1 minute
-        nMaturity = 100;
+        nMaturity = 5;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 21000000 * COIN;
 
@@ -152,14 +152,14 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1524070210;
+        genesis.nTime = 1524074508;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 22985670;
 
         hashGenesisBlock = genesis.GetHash();
          //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
          //printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-         assert(hashGenesisBlock == uint256("0xa6e272a6bd45b0f91fce64beff069c6ad6ef4b1568db8827ac8f6ce08eee5b14"));
+         assert(hashGenesisBlock == uint256("0xe210ce2462a9849c51fabe905335f679baca9fc04b6ce5ad7966f24dd4029410"));
          assert(genesis.hashMerkleRoot == uint256("0x759231d966c09431e5098df49475bb79e09557fa32a84f589b1af11860491245"));
 
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
