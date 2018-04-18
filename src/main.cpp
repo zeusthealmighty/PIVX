@@ -2118,20 +2118,20 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-    int64_t nSubsidy = 1;
+    int64_t nSubsidy = 0;
 
-    if(nHeight ==      1) {nSubsidy = 1500000;}
-    if(nHeight >=      2 && nHeight < 201) {nSubsidy = 0;}
-    if(nHeight >=    201 && nHeight < 4501) {nSubsidy = 1;}
-    if(nHeight >=   4501 && nHeight < 25501) {nSubsidy = 50;}
-    if(nHeight >=  25501 && nHeight < 35501) {nSubsidy = 45;}
-    if(nHeight >=  35501 && nHeight < 60001) {nSubsidy = 40;}
-    if(nHeight >=  60001 && nHeight < 100001) {nSubsidy = 35;}
-    if(nHeight >= 100001 && nHeight < 125001) {nSubsidy = 30;}
-    if(nHeight >= 125001 && nHeight < 150001) {nSubsidy = 25;}
-    if(nHeight >= 150001 && nHeight < 200001) {nSubsidy = 20;}
-    if(nHeight >= 200001 && nHeight < 250001) {nSubsidy = 15;}
-    if(nHeight >= 250001 && nHeight < 500001) {nSubsidy = 10;}
+    if(nHeight ==      1) {nSubsidy = 1500000 * COIN;}
+    if(nHeight >=      2 && nHeight < 201) {nSubsidy = 0 * COIN;}
+    if(nHeight >=    201 && nHeight < 4501) {nSubsidy = 1 * COIN;}
+    if(nHeight >=   4501 && nHeight < 25501) {nSubsidy = 50 * COIN;}
+    if(nHeight >=  25501 && nHeight < 35501) {nSubsidy = 45 * COIN;}
+    if(nHeight >=  35501 && nHeight < 60001) {nSubsidy = 40 * COIN;}
+    if(nHeight >=  60001 && nHeight < 100001) {nSubsidy = 35 * COIN;}
+    if(nHeight >= 100001 && nHeight < 125001) {nSubsidy = 30 * COIN;}
+    if(nHeight >= 125001 && nHeight < 150001) {nSubsidy = 25 * COIN;}
+    if(nHeight >= 150001 && nHeight < 200001) {nSubsidy = 20 * COIN;}
+    if(nHeight >= 200001 && nHeight < 250001) {nSubsidy = 15 * COIN;}
+    if(nHeight >= 250001 && nHeight < 500001) {nSubsidy = 10 * COIN;}
     //halving every 500 000.
     if(nHeight >= 500001) {
     	long power = long((nHeight/500000));
@@ -2143,7 +2143,7 @@ int64_t GetBlockValue(int nHeight)
     	nSubsidy = 10/(dividend);
     }
 
-    return nSubsidy * COIN;
+    return nSubsidy;
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
