@@ -94,8 +94,7 @@ CBlockIndex* GetLastCheckpoint()
         const uint256& hash = i.second;
         BlockMap::const_iterator t = mapBlockIndex.find(hash);
         if (t != mapBlockIndex.end())
-        return NULL;
-            //return t->second;
+            return t->second;
     }
     return NULL;
 }
