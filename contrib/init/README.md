@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: pivxd.service
-Upstart: pivxd.conf
-OpenRC:  pivxd.openrc
-         pivxd.openrcconf
-CentOS:  pivxd.init
+SystemD: miraid.service
+Upstart: miraid.conf
+OpenRC:  miraid.openrc
+         miraid.openrcconf
+CentOS:  miraid.init
 
 have been made available to assist packagers in creating node packages here.
 

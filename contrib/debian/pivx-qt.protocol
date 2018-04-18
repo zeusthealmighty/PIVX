@@ -1,6 +1,6 @@
 [Protocol]
-exec=pivx-qt '%u'
-protocol=pivx
+exec=mirai-qt '%u'
+protocol=mirai
 input=none
 output=none
 helper=true

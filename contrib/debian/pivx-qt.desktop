@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=PIVX
-Comment=PIVX P2P Cryptocurrency
-Comment[fr]=PIVX, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=PIVX, eşten eşe kriptografik sanal para birimi
-Exec=pivx-qt %u
+Name=MRI
+Comment=MRI P2P Cryptocurrency
+Comment[fr]=MRI, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=MRI, eşten eşe kriptografik sanal para birimi
+Exec=mirai-qt %u
 Terminal=false
 Type=Application
-Icon=pivx128
-MimeType=x-scheme-handler/pivx;
+Icon=mirai128
+MimeType=x-scheme-handler/mirai;
 Categories=Office;Finance;

@@ -1,19 +1,19 @@
 [Unit]
-Description=PIVX's distributed currency daemon
+Description=MRI's distributed currency daemon
 After=network.target
 
 [Service]
-User=pivx
-Group=pivx
+User=mirai
+Group=mirai
 
 Type=forking
-PIDFile=/var/lib/pivxd/pivxd.pid
+PIDFile=/var/lib/miraid/miraid.pid
 
-ExecStart=/usr/bin/pivxd -daemon -pid=/var/lib/pivxd/pivxd.pid \
-          -conf=/etc/pivx/pivx.conf -datadir=/var/lib/pivxd
+ExecStart=/usr/bin/miraid -daemon -pid=/var/lib/miraid/miraid.pid \
+          -conf=/etc/mirai/mirai.conf -datadir=/var/lib/miraid
 
-ExecStop=-/usr/bin/pivx-cli -conf=/etc/pivx/pivx.conf \
-         -datadir=/var/lib/pivxd stop
+ExecStop=-/usr/bin/mirai-cli -conf=/etc/mirai/mirai.conf \
+         -datadir=/var/lib/miraid stop
 
 Restart=always
 PrivateTmp=true

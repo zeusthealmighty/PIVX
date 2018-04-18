@@ -62,12 +62,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши PIVX-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
+        <source>These are your MRI addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши MRI-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши PIVX-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
+        <source>These are your MRI addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши MRI-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Подтверждение шифрования кошелька</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши PIVX от кражи с использованием вредоносного ПО.</translation>
+        <source>MRI will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
+        <translation>MRI сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши MRI от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -236,15 +236,15 @@
     </message>
     <message>
         <source>Enter a Pivx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Введите PIVX адрес, которым вы хотите зашифровать, используя BIP 38. Введите пароль в среднем поле. Нажмите "Зашифровать", чтобы создать зашиврованный секретный ключ.</translation>
+        <translation>Введите MRI адрес, которым вы хотите зашифровать, используя BIP 38. Введите пароль в среднем поле. Нажмите "Зашифровать", чтобы создать зашиврованный секретный ключ.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Адрес:</translation>
     </message>
     <message>
-        <source>The PIVX address to sign the message with</source>
-        <translation>Адрес PIVX для подписи сообщения с помощью</translation>
+        <source>The MRI address to sign the message with</source>
+        <translation>Адрес MRI для подписи сообщения с помощью</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Копировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this PIVX address</source>
-        <translation>Подпишите сообщение, чтобы подтвердить свой адрес PIVX</translation>
+        <source>Sign the message to prove you own this MRI address</source>
+        <translation>Подпишите сообщение, чтобы подтвердить свой адрес MRI</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Введите зашифрованный с помощью BIP 38 секретный ключ. Введите секретную фразу в среднем окне. Нажмите Дешифровать Ключ чтобы создать секретный ключ. Нажав на Импортировать Адрес после дешифровки, вы добавите секретный ключ к кошельку.</translation>
     </message>
     <message>
-        <source>The PIVX address the message was signed with</source>
-        <translation>Адрес PIVX, которым подписано сообщение</translation>
+        <source>The MRI address the message was signed with</source>
+        <translation>Адрес MRI, которым подписано сообщение</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified PIVX address</source>
-        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным PIVX адресом </translation>
+        <source>Verify the message to ensure it was signed with the specified MRI address</source>
+        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным MRI адресом </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -594,16 +594,16 @@
         <translation>Панель вкладок</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>MRI Core</source>
+        <translation>MRI Core</translation>
     </message>
     <message>
-        <source>Send coins to a PIVX address</source>
-        <translation>Отправить монеты на PIVX адрес</translation>
+        <source>Send coins to a MRI address</source>
+        <translation>Отправить монеты на MRI адрес</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Запросить платежи (генерирует QR-код и PIVX: URI)</translation>
+        <source>Request payments (generates QR codes and mirai: URIs)</source>
+        <translation>Запросить платежи (генерирует QR-код и MRI: URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -614,24 +614,24 @@
         <translation>Обзор мастернод</translation>
     </message>
     <message>
-        <source>&amp;About PIVX Core</source>
-        <translation>&amp;О PIVX Core</translation>
+        <source>&amp;About MRI Core</source>
+        <translation>&amp;О MRI Core</translation>
     </message>
     <message>
-        <source>Show information about PIVX Core</source>
-        <translation>Показать информацию о PIVX Core</translation>
+        <source>Show information about MRI Core</source>
+        <translation>Показать информацию о MRI Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for PIVX</source>
-        <translation>Изменение параметров конфигурации PIVX</translation>
+        <source>Modify configuration options for MRI</source>
+        <translation>Изменение параметров конфигурации MRI</translation>
     </message>
     <message>
-        <source>Sign messages with your PIVX addresses to prove you own them</source>
-        <translation>Подписывайте сообщения вашими PIVX адресами, чтобы доказать, что вы их владелец</translation>
+        <source>Sign messages with your MRI addresses to prove you own them</source>
+        <translation>Подписывайте сообщения вашими MRI адресами, чтобы доказать, что вы их владелец</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified PIVX addresses</source>
-        <translation>Проверте сообщения, чтобы убедиться, что они были подписаны указанным PIVX адресом </translation>
+        <source>Verify messages to ensure they were signed with specified MRI addresses</source>
+        <translation>Проверте сообщения, чтобы убедиться, что они были подписаны указанным MRI адресом </translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -662,8 +662,8 @@
         <translation>Открыть файл настроек мастернод</translation>
     </message>
     <message>
-        <source>Open a PIVX: URI or payment request</source>
-        <translation>Открыть PIVX: URI или запрос платежа</translation>
+        <source>Open a MRI: URI or payment request</source>
+        <translation>Открыть MRI: URI или запрос платежа</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -674,12 +674,12 @@
         <translation>Окно обзора блока</translation>
     </message>
     <message>
-        <source>Show the PIVX Core help message to get a list with possible PIVX command-line options</source>
-        <translation>Смотрите помощь к программе, чтобы получить документацию ко всем возможным опциям комманды PIVX</translation>
+        <source>Show the MRI Core help message to get a list with possible MRI command-line options</source>
+        <translation>Смотрите помощь к программе, чтобы получить документацию ко всем возможным опциям комманды MRI</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>Клиент PIVX Core</translation>
+        <source>MRI Core client</source>
+        <translation>Клиент MRI Core</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -809,8 +809,8 @@ MultiSend: %1</translation>
         <translation>Текстовая метка</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
-        <translation>Будут показаны не все транзакции. Для отображения всех транзакций необходимо выставить txindex=1 в конфигурационном файле (pivx.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (mirai.conf).</source>
+        <translation>Будут показаны не все транзакции. Для отображения всех транзакций необходимо выставить txindex=1 в конфигурационном файле (mirai.conf).</translation>
     </message>
 </context>
 <context>
@@ -1098,8 +1098,8 @@ MultiSend: %1</translation>
         <translation>Изменить адрес отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>Введенный адрес "%1" не является PIVX адресом.</translation>
+        <source>The entered address "%1" is not a valid MRI address.</source>
+        <translation>Введенный адрес "%1" не является MRI адресом.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1144,16 +1144,16 @@ MultiSend: %1</translation>
         <translation>версия</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>MRI Core</source>
+        <translation>MRI Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-бит)</translation>
     </message>
     <message>
-        <source>About PIVX Core</source>
-        <translation>О PIVX Core</translation>
+        <source>About MRI Core</source>
+        <translation>О MRI Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1199,16 +1199,16 @@ MultiSend: %1</translation>
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <source>Welcome to PIVX Core.</source>
-        <translation>Добро пожаловать в PIVX Core.</translation>
+        <source>Welcome to MRI Core.</source>
+        <translation>Добро пожаловать в MRI Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
-        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные PIVX Core.</translation>
+        <source>As this is the first time the program is launched, you can choose where MRI Core will store its data.</source>
+        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные MRI Core.</translation>
     </message>
     <message>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>PIVX Core загрузит и сохранит копию цепочки блоков PIVX. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
+        <source>MRI Core will download and store a copy of the MRI block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>MRI Core загрузит и сохранит копию цепочки блоков MRI. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1219,8 +1219,8 @@ MultiSend: %1</translation>
         <translation>Использовать другой каталог данных:</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>MRI Core</source>
+        <translation>MRI Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1361,12 +1361,12 @@ MultiSend: %1</translation>
         <translation>Введите адрес для отправки</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.
-To Add: enter percentage to give and PIVX address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other MRI addresses after it matures.
+To Add: enter percentage to give and MRI address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend позволяет вам автоматически отправлять до 100% вознаграждения за мастерноды и хранение, после их созревания, на другие PIVX адреса.
-Для добавления: введите передаваемый процент и PIVX адрес для добавления к вектору MultiSend.
+        <translation>MultiSend позволяет вам автоматически отправлять до 100% вознаграждения за мастерноды и хранение, после их созревания, на другие MRI адреса.
+Для добавления: введите передаваемый процент и MRI адрес для добавления к вектору MultiSend.
 Для удаления: введите удаляемый адрес и нажмите удалить.
 MultiSend будет неактивен до тех пор, пока вы не нажмете Включить</translation>
     </message>
@@ -1536,16 +1536,16 @@ Please check the address and try again.</source>
         <translation>Настройка Перемешивания</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening PIVX's configuration screen.</source>
-        <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки PIVX.</translation>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening MRI's configuration screen.</source>
+        <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки MRI.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening PIVX's configuration screen.</source>
-        <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки PIVX.</translation>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening MRI's configuration screen.</source>
+        <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки MRI.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening PIVX's configuration screen.</source>
-        <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки PIVX.</translation>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening MRI's configuration screen.</source>
+        <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки MRI.</translation>
     </message>
 </context>
 <context>
@@ -1606,8 +1606,8 @@ Please check the address and try again.</source>
         <translation>Отключив проведение неподтвержденных изменений все изменения о транзакции &lt;br/&gt;не будут использованы пока транзакция не получит хотя бы одно подтверждение.&lt;br/&gt;Также это влияет на расчет вашего баланса.</translation>
     </message>
     <message>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть клиентский порт PIVX через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
+        <source>Automatically open the MRI client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть клиентский порт MRI через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1626,12 +1626,12 @@ Please check the address and try again.</source>
         <translation>Эксперт</translation>
     </message>
     <message>
-        <source>Automatically start PIVX after logging in to the system.</source>
-        <translation>Автоматически запускать PIVX после входа в систему.</translation>
+        <source>Automatically start MRI after logging in to the system.</source>
+        <translation>Автоматически запускать MRI после входа в систему.</translation>
     </message>
     <message>
-        <source>&amp;Start PIVX on system login</source>
-        <translation>&amp;Запускать PIVX при входе в систему</translation>
+        <source>&amp;Start MRI on system login</source>
+        <translation>&amp;Запускать MRI при входе в систему</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1658,22 +1658,22 @@ Please check the address and try again.</source>
         <translation>&amp;Сеть</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
-        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска PIVX.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting MRI.</source>
+        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска MRI.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/mirai-project/mirai-project-translations</source>
         <translation>Отсутствует ваш язык или заметили незавершенный перевод? Вы можете помочь нам стать лучше:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://www.transifex.com/mirai-project/mirai-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
-        <translation>Подключиться к сети PIVX через SOCKS5 прокси.</translation>
+        <source>Connect to the MRI network through a SOCKS5 proxy.</source>
+        <translation>Подключиться к сети MRI через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1823,8 +1823,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Награды за хранение и мастерноды, которые еще не *созрели*</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the PIVX network after a connection is established, but this process has not completed yet.</source>
-        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью PIVX после установки соединения, но этот процесс еще не завершен. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the MRI network after a connection is established, but this process has not completed yet.</source>
+        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью MRI после установки соединения, но этот процесс еще не завершен. </translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -1886,12 +1886,12 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Неверный адрес оплаты %1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>Не удалось запустить pivx: обработчик click-to-pay </translation>
+        <source>Cannot start mirai: click-to-pay handler</source>
+        <translation>Не удалось запустить mirai: обработчик click-to-pay </translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
-        <translation>URI не интерпретируется! Причиной этому может быть неверный PIVX адрес или неверные параметеры URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid MRI address or malformed URI parameters.</source>
+        <translation>URI не интерпретируется! Причиной этому может быть неверный MRI адрес или неверные параметеры URI.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1972,8 +1972,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the PIVX network after a connection is established, but this process has not completed yet.</source>
-        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью PIVX после установки соединения, но этот процесс еще не завершен. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the MRI network after a connection is established, but this process has not completed yet.</source>
+        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью MRI после установки соединения, но этот процесс еще не завершен. </translation>
     </message>
     <message>
         <source>0</source>
@@ -2055,8 +2055,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Сумма</translation>
     </message>
     <message>
-        <source>Enter a PIVX address (e.g. %1)</source>
-        <translation>Введите адрес PIVX (например %1)</translation>
+        <source>Enter a MRI address (e.g. %1)</source>
+        <translation>Введите адрес MRI (например %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2189,8 +2189,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Блокчейн</translation>
     </message>
     <message>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Открыть протокол отладки PIVX. Это может занять некоторе время, если файл протокола очень большой.</translation>
+        <source>Open the MRI debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Открыть протокол отладки MRI. Это может занять некоторе время, если файл протокола очень большой.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2350,8 +2350,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Вывод:</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Добро пожаловать в окружение PIVX RPC.</translation>
+        <source>Welcome to the MRI RPC console.</source>
+        <translation>Добро пожаловать в окружение MRI RPC.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2650,8 +2650,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Копировать изменение</translation>
     </message>
     <message>
-        <source>Warning: Invalid PIVX address</source>
-        <translation>Предупреждение: неправильный PIVX адрес</translation>
+        <source>Warning: Invalid MRI address</source>
+        <translation>Предупреждение: неправильный MRI адрес</translation>
     </message>
     <message>
         <source>and SwiftTX</source>
@@ -2704,8 +2704,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>PIVX Core is shutting down...</source>
-        <translation>PIVX Core выключается...</translation>
+        <source>MRI Core is shutting down...</source>
+        <translation>MRI Core выключается...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2715,8 +2715,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The PIVX address to sign the message with</source>
-        <translation>Адрес PIVX для подписи сообщения с помощью</translation>
+        <source>The MRI address to sign the message with</source>
+        <translation>Адрес MRI для подписи сообщения с помощью</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2739,16 +2739,16 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Копировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this PIVX address</source>
-        <translation>Подпишите сообщение, чтобы подтвердить свой адрес PIVX</translation>
+        <source>Sign the message to prove you own this MRI address</source>
+        <translation>Подпишите сообщение, чтобы подтвердить свой адрес MRI</translation>
     </message>
     <message>
-        <source>The PIVX address the message was signed with</source>
-        <translation>Адрес PIVX, которым подписано сообщение</translation>
+        <source>The MRI address the message was signed with</source>
+        <translation>Адрес MRI, которым подписано сообщение</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified PIVX address</source>
-        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным PIVX адресом </translation>
+        <source>Verify the message to ensure it was signed with the specified MRI address</source>
+        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным MRI адресом </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -2794,8 +2794,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>MRI Core</source>
+        <translation>MRI Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2810,8 +2810,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>The PIVX Core developers</source>
-        <translation>Разработчики PIVX Core</translation>
+        <source>The MRI Core developers</source>
+        <translation>Разработчики MRI Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3069,7 +3069,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>mirai-core</name>
     <message>
         <source>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
         <translation>Для SwiftTX требуется как минимум 6 подтверждений, Вам нужно подождать несколько минут и попытаться снова.</translation>
@@ -3103,8 +3103,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
-        <translation>Copyright (C) 2015-%i Разработчики PIVX Core</translation>
+        <source>Copyright (C) 2015-%i The MRI Core Developers</source>
+        <translation>Copyright (C) 2015-%i Разработчики MRI Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

@@ -152,8 +152,8 @@
         <translation>Confirmer le cryptage du portefeuille</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos PIVs d'un vol par un malware ayant infecté votre ordinateur. </translation>
+        <source>MRI will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
+        <translation>MRI va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos PIVs d'un vol par un malware ayant infecté votre ordinateur. </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -219,8 +219,8 @@
         <translation>Adresse :</translation>
     </message>
     <message>
-        <source>The PIVX address to sign the message with</source>
-        <translation>L'adresse PIVX avec laquelle signer le message</translation>
+        <source>The MRI address to sign the message with</source>
+        <translation>L'adresse MRI avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -251,8 +251,8 @@
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this PIVX address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse PIVX</translation>
+        <source>Sign the message to prove you own this MRI address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse MRI</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -271,12 +271,12 @@
         <translation>BIP 38 Décrypter</translation>
     </message>
     <message>
-        <source>The PIVX address the message was signed with</source>
-        <translation>L'adresse PIVX avec laquelle le message a été signé</translation>
+        <source>The MRI address the message was signed with</source>
+        <translation>L'adresse MRI avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified PIVX address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse PIVX renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified MRI address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse MRI renseignée</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -534,8 +534,8 @@
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <source>Send coins to a PIVX address</source>
-        <translation>Envoyer des pièces à une adresse PIVX</translation>
+        <source>Send coins to a MRI address</source>
+        <translation>Envoyer des pièces à une adresse MRI</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -546,16 +546,16 @@
         <translation>Afficher les masternodes</translation>
     </message>
     <message>
-        <source>Modify configuration options for PIVX</source>
-        <translation>Modifier les options de configuration pour PIVX</translation>
+        <source>Modify configuration options for MRI</source>
+        <translation>Modifier les options de configuration pour MRI</translation>
     </message>
     <message>
-        <source>Sign messages with your PIVX addresses to prove you own them</source>
-        <translation>Signer les messages avec votre adresse PIVX pour prouver qu'elles sont bien à vous.</translation>
+        <source>Sign messages with your MRI addresses to prove you own them</source>
+        <translation>Signer les messages avec votre adresse MRI pour prouver qu'elles sont bien à vous.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified PIVX addresses</source>
-        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse PIVX spécifié</translation>
+        <source>Verify messages to ensure they were signed with specified MRI addresses</source>
+        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse MRI spécifié</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -653,8 +653,8 @@ Adresse : %4
         <translation>Chercher</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
-        <translation>Toutes les transaction ne seront pas affichés. Pour voir toutes les transactions, vous devez régler txindex=1 dans le fichier de configuration (pivx.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (mirai.conf).</source>
+        <translation>Toutes les transaction ne seront pas affichés. Pour voir toutes les transactions, vous devez régler txindex=1 dans le fichier de configuration (mirai.conf).</translation>
     </message>
 </context>
 <context>
@@ -854,8 +854,8 @@ Adresse : %4
         <translation>Modifier l'adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>L'adresse entrée "%1" n'est pas une adresse PIVX valide</translation>
+        <source>The entered address "%1" is not a valid MRI address.</source>
+        <translation>L'adresse entrée "%1" n'est pas une adresse MRI valide</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1524,8 +1524,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Payer à :</translation>
     </message>
     <message>
-        <source>The PIVX address to send the payment to</source>
-        <translation>L'adresse PIVX à laquelle envoyer le paiement</translation>
+        <source>The MRI address to send the payment to</source>
+        <translation>L'adresse MRI à laquelle envoyer le paiement</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1570,8 +1570,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Signer le message</translation>
     </message>
     <message>
-        <source>The PIVX address to sign the message with</source>
-        <translation>L'adresse PIVX avec laquelle signer le message</translation>
+        <source>The MRI address to sign the message with</source>
+        <translation>L'adresse MRI avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1598,16 +1598,16 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this PIVX address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse PIVX</translation>
+        <source>Sign the message to prove you own this MRI address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse MRI</translation>
     </message>
     <message>
-        <source>The PIVX address the message was signed with</source>
-        <translation>L'adresse PIVX avec laquelle le message a été signé</translation>
+        <source>The MRI address the message was signed with</source>
+        <translation>L'adresse MRI avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified PIVX address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse PIVX renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified MRI address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse MRI renseignée</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1808,7 +1808,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>mirai-core</name>
     <message>
         <source>Error</source>
         <translation>Erreur</translation>

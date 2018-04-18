@@ -266,6 +266,6 @@
     <name>ZPivControlDialog</name>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>mirai-core</name>
     </context>
 </TS>

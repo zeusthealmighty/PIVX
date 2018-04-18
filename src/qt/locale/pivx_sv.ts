@@ -58,12 +58,12 @@
         <translation>Mottagar adresser</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Det här är dina PIVX adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
+        <source>These are your MRI addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Det här är dina MRI adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Det här är dina PIVX adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your MRI addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Det här är dina MRI adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Bekräfta plånboks krypering</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina PIVs från att bli stulna av skadeprogram som infekterat din dator.</translation>
+        <source>MRI will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
+        <translation>MRI kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina PIVs från att bli stulna av skadeprogram som infekterat din dator.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -232,8 +232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Adress:</translation>
     </message>
     <message>
-        <source>The PIVX address to sign the message with</source>
-        <translation>PIVX adressen för signera meddelandet med</translation>
+        <source>The MRI address to sign the message with</source>
+        <translation>MRI adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -264,8 +264,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this PIVX address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna PIVX adress</translation>
+        <source>Sign the message to prove you own this MRI address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna MRI adress</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -288,12 +288,12 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Ange BIP 38 krypterade privata nyckeln. Ange lösenfrasen i med mittersta boxen. Tryck på krypetra nyckel för att beräkna den privata nyckeln. Efter att nyckeln är avkrypterad, Tryck på 'Importera Adress' kommer att lägga till denna privata nyckel till plånboken.</translation>
     </message>
     <message>
-        <source>The PIVX address the message was signed with</source>
-        <translation>PIVX adressen meddelandet blev signerat med</translation>
+        <source>The MRI address the message was signed with</source>
+        <translation>MRI adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified PIVX address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika PIVX adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified MRI address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika MRI adressen.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -583,16 +583,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>flik vertygsrad</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Kärna</translation>
+        <source>MRI Core</source>
+        <translation>MRI Kärna</translation>
     </message>
     <message>
-        <source>Send coins to a PIVX address</source>
-        <translation>Skicka mynt till en PIVX adress</translation>
+        <source>Send coins to a MRI address</source>
+        <translation>Skicka mynt till en MRI adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och pivx: URls)</translation>
+        <source>Request payments (generates QR codes and mirai: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och mirai: URls)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -603,24 +603,24 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Utforska masternoder</translation>
     </message>
     <message>
-        <source>&amp;About PIVX Core</source>
-        <translation>Om PIVX Kärnan</translation>
+        <source>&amp;About MRI Core</source>
+        <translation>Om MRI Kärnan</translation>
     </message>
     <message>
-        <source>Show information about PIVX Core</source>
-        <translation>Visa information om PIVX Kärnan</translation>
+        <source>Show information about MRI Core</source>
+        <translation>Visa information om MRI Kärnan</translation>
     </message>
     <message>
-        <source>Modify configuration options for PIVX</source>
-        <translation>Ändra konfigurationsval för PIVX</translation>
+        <source>Modify configuration options for MRI</source>
+        <translation>Ändra konfigurationsval för MRI</translation>
     </message>
     <message>
-        <source>Sign messages with your PIVX addresses to prove you own them</source>
-        <translation>Signera meddelanden med din PIVX adress för att visa att du äger dem</translation>
+        <source>Sign messages with your MRI addresses to prove you own them</source>
+        <translation>Signera meddelanden med din MRI adress för att visa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified PIVX addresses</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika PIVX adressen.</translation>
+        <source>Verify messages to ensure they were signed with specified MRI addresses</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika MRI adressen.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -631,8 +631,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kryptera och avkryptera privata nycklar genom användning av lösenfras</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>PIVX kärn klient</translation>
+        <source>MRI Core client</source>
+        <translation>MRI kärn klient</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -837,15 +837,15 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Kärna</translation>
+        <source>MRI Core</source>
+        <translation>MRI Kärna</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Kärna</translation>
+        <source>MRI Core</source>
+        <translation>MRI Kärna</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1157,8 +1157,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The PIVX address to sign the message with</source>
-        <translation>PIVX adressen för signera meddelandet med</translation>
+        <source>The MRI address to sign the message with</source>
+        <translation>MRI adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1181,16 +1181,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this PIVX address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna PIVX adress</translation>
+        <source>Sign the message to prove you own this MRI address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna MRI adress</translation>
     </message>
     <message>
-        <source>The PIVX address the message was signed with</source>
-        <translation>PIVX adressen meddelandet blev signerat med</translation>
+        <source>The MRI address the message was signed with</source>
+        <translation>MRI adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified PIVX address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika PIVX adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified MRI address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika MRI adressen.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1232,8 +1232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Kärna</translation>
+        <source>MRI Core</source>
+        <translation>MRI Kärna</translation>
     </message>
     </context>
 <context>
@@ -1419,7 +1419,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
     <name>ZPivControlDialog</name>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>mirai-core</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>
