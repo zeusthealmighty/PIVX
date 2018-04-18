@@ -14,7 +14,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.mirai.Pivx-Qt";
+        return @"io.mirai.Mirai-Qt";
     } else {
         return [self __bundleIdentifier];
     }

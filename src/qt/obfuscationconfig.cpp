@@ -80,8 +80,8 @@ void ObfuscationConfig::configure(bool enabled, int coins, int rounds)
     QSettings settings;
 
     settings.setValue("nObfuscationRounds", rounds);
-    settings.setValue("nAnonymizePivxAmount", coins);
+    settings.setValue("nAnonymizeMiraiAmount", coins);
 
     nZeromintPercentage = rounds;
-    nAnonymizePivxAmount = coins;
+    nAnonymizeMiraiAmount = coins;
 }
