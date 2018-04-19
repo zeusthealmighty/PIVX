@@ -42,7 +42,7 @@ The following are developer notes on how to build MRI on your native platform. T
 
 Development
 ---------------------
-The Pivx repo's [root README](https://github.com/MRI-Project/MRI/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Mirai repo's [root README](https://github.com/MRI-Project/MRI/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

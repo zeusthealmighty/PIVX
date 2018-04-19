@@ -1410,16 +1410,16 @@ bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fReject
         if (txout.IsEmpty() && !tx.IsCoinBase() && !tx.IsCoinStake())
             return state.DoS(100, error("CheckTransaction(): txout empty for user transaction"));
 
-        if (txout.nValue < 0)
-            return state.DoS(100, error("CheckTransaction() : txout.nValue negative"),
-                REJECT_INVALID, "bad-txns-vout-negative");
+        //if (txout.nValue < 0)
+        //    return state.DoS(100, error("CheckTransaction() : txout.nValue negative"),
+        //        REJECT_INVALID, "bad-txns-vout-negative");
         if (txout.nValue > Params().MaxMoneyOut())
             return state.DoS(100, error("CheckTransaction() : txout.nValue too high"),
                 REJECT_INVALID, "bad-txns-vout-toolarge");
         nValueOut += txout.nValue;
-        if (!MoneyRange(nValueOut))
-            return state.DoS(100, error("CheckTransaction() : txout total out of range"),
-                REJECT_INVALID, "bad-txns-txouttotal-toolarge");
+        //if (!MoneyRange(nValueOut))
+        //    return state.DoS(100, error("CheckTransaction() : txout total out of range"),
+        //        REJECT_INVALID, "bad-txns-txouttotal-toolarge");
         if (fZerocoinActive && txout.IsZerocoinMint()) {
             if(!CheckZerocoinMint(tx.GetHash(), txout, state, false))
                 return state.DoS(100, error("CheckTransaction() : invalid zerocoin mint"));
@@ -1460,19 +1460,19 @@ bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fReject
             vInOutPoints.insert(txin.prevout);
     }
 
-    if (tx.IsCoinBase()) {
-        if (tx.vin[0].scriptSig.size() < 2 || tx.vin[0].scriptSig.size() > 150)
-            return state.DoS(100, error("CheckTransaction() : coinbase script size=%d", tx.vin[0].scriptSig.size()),
-                REJECT_INVALID, "bad-cb-length");
-    } else if (fZerocoinActive && tx.IsZerocoinSpend()) {
-        if(tx.vin.size() < 1 || static_cast<int>(tx.vin.size()) > Params().Zerocoin_MaxSpendsPerTransaction())
-            return state.DoS(10, error("CheckTransaction() : Zerocoin Spend has more than allowed txin's"), REJECT_INVALID, "bad-zerocoinspend");
-    } else {
-        BOOST_FOREACH (const CTxIn& txin, tx.vin)
-            if (txin.prevout.IsNull() && (fZerocoinActive && !txin.scriptSig.IsZerocoinSpend()))
-                return state.DoS(10, error("CheckTransaction() : prevout is null"),
-                    REJECT_INVALID, "bad-txns-prevout-null");
-    }
+    //if (tx.IsCoinBase()) {
+    //    if (tx.vin[0].scriptSig.size() < 2 || tx.vin[0].scriptSig.size() > 150)
+    //        return state.DoS(100, error("CheckTransaction() : coinbase script size=%d", tx.vin[0].scriptSig.size()),
+    //            REJECT_INVALID, "bad-cb-length");
+    //} else if (fZerocoinActive && tx.IsZerocoinSpend()) {
+    //    if(tx.vin.size() < 1 || static_cast<int>(tx.vin.size()) > Params().Zerocoin_MaxSpendsPerTransaction())
+    //        return state.DoS(10, error("CheckTransaction() : Zerocoin Spend has more than allowed txin's"), REJECT_INVALID, "bad-zerocoinspend");
+    //} else {
+    //    BOOST_FOREACH (const CTxIn& txin, tx.vin)
+    //        if (txin.prevout.IsNull() && (fZerocoinActive && !txin.scriptSig.IsZerocoinSpend()))
+    //            return state.DoS(10, error("CheckTransaction() : prevout is null"),
+    //                REJECT_INVALID, "bad-txns-prevout-null");
+    //}
 
     return true;
 }
@@ -1618,7 +1618,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
                     continue;
                 CoinSpend spend = TxInToZerocoinSpend(txIn);
                 if (!ContextualCheckCoinSpend(spend, chainActive.Tip(), txid))
-                    return state.Invalid(error("%s: zPIV spend in tx %s failed to pass context checks", __func__, txid.GetHex()));
+                    return state.Invalid(error("%s: zMRI spend in tx %s failed to pass context checks", __func__, txid.GetHex()));
             }
         } else {
             LOCK(pool.cs);
@@ -2120,18 +2120,18 @@ int64_t GetBlockValue(int nHeight)
 {
     int64_t nSubsidy = 0;
 
-    if(nHeight ==      0) {nSubsidy = 1500000;}
-    if(nHeight >=      1 && nHeight < 201) {nSubsidy = 0;}
-    if(nHeight >=    201 && nHeight < 4501) {nSubsidy = 1;}
-    if(nHeight >=   4501 && nHeight < 25501) {nSubsidy = 50;}
-    if(nHeight >=  25501 && nHeight < 35501) {nSubsidy = 45;}
-    if(nHeight >=  35501 && nHeight < 60001) {nSubsidy = 40;}
-    if(nHeight >=  60001 && nHeight < 100001) {nSubsidy = 35;}
-    if(nHeight >= 100001 && nHeight < 125001) {nSubsidy = 30;}
-    if(nHeight >= 125001 && nHeight < 150001) {nSubsidy = 25;}
-    if(nHeight >= 150001 && nHeight < 200001) {nSubsidy = 20;}
-    if(nHeight >= 200001 && nHeight < 250001) {nSubsidy = 15;}
-    if(nHeight >= 250001 && nHeight < 500001) {nSubsidy = 10;}
+    if(nHeight ==      1) {nSubsidy = 1500000 * COIN;}
+    if(nHeight >=      2 && nHeight < 201) {nSubsidy = 0 * COIN;}
+    if(nHeight >=    201 && nHeight < 4501) {nSubsidy = 1 * COIN;}
+    if(nHeight >=   4501 && nHeight < 25501) {nSubsidy = 50 * COIN;}
+    if(nHeight >=  25501 && nHeight < 35501) {nSubsidy = 45 * COIN;}
+    if(nHeight >=  35501 && nHeight < 60001) {nSubsidy = 40 * COIN;}
+    if(nHeight >=  60001 && nHeight < 100001) {nSubsidy = 35 * COIN;}
+    if(nHeight >= 100001 && nHeight < 125001) {nSubsidy = 30 * COIN;}
+    if(nHeight >= 125001 && nHeight < 150001) {nSubsidy = 25 * COIN;}
+    if(nHeight >= 150001 && nHeight < 200001) {nSubsidy = 20 * COIN;}
+    if(nHeight >= 200001 && nHeight < 250001) {nSubsidy = 15 * COIN;}
+    if(nHeight >= 250001 && nHeight < 500001) {nSubsidy = 10 * COIN;}
     //halving every 500 000.
     if(nHeight >= 500001) {
     	long power = long((nHeight/500000));
@@ -2143,7 +2143,7 @@ int64_t GetBlockValue(int nHeight)
     	nSubsidy = 10/(dividend);
     }
 
-    return nSubsidy * COIN;
+    return nSubsidy;
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
@@ -2752,7 +2752,7 @@ void ThreadScriptCheck()
     scriptcheckqueue.Thread();
 }
 
-void RecalculateZPIVMinted()
+void RecalculateZMRIMinted()
 {
     CBlockIndex *pindex = chainActive[Params().Zerocoin_StartHeight()];
     int nHeightEnd = chainActive.Height();
@@ -2779,14 +2779,14 @@ void RecalculateZPIVMinted()
     }
 }
 
-void RecalculateZPIVSpent()
+void RecalculateZMRISpent()
 {
     CBlockIndex* pindex = chainActive[Params().Zerocoin_StartHeight()];
     while (true) {
         if (pindex->nHeight % 1000 == 0)
             LogPrintf("%s : block %d...\n", __func__, pindex->nHeight);
 
-        //Rewrite zPIV supply
+        //Rewrite zMRI supply
         CBlock block;
         assert(ReadBlockFromDisk(block, pindex));
 
@@ -2795,13 +2795,13 @@ void RecalculateZPIVSpent()
         //Reset the supply to previous block
         pindex->mapZerocoinSupply = pindex->pprev->mapZerocoinSupply;
 
-        //Add mints to zPIV supply
+        //Add mints to zMRI supply
         for (auto denom : libzerocoin::zerocoinDenomList) {
             long nDenomAdded = count(pindex->vMintDenominationsInBlock.begin(), pindex->vMintDenominationsInBlock.end(), denom);
             pindex->mapZerocoinSupply.at(denom) += nDenomAdded;
         }
 
-        //Remove spends from zPIV supply
+        //Remove spends from zMRI supply
         for (auto denom : listDenomsSpent)
             pindex->mapZerocoinSupply.at(denom)--;
 
@@ -2815,7 +2815,7 @@ void RecalculateZPIVSpent()
     }
 }
 
-bool RecalculatePIVSupply(int nHeightStart)
+bool RecalculateMRISupply(int nHeightStart)
 {
     if (nHeightStart > chainActive.Height())
         return false;
@@ -2941,7 +2941,7 @@ bool ReindexAccumulators(list<uint256>& listMissingCheckpoints, string& strError
     return true;
 }
 
-bool UpdateZPIVSupply(const CBlock& block, CBlockIndex* pindex)
+bool UpdateZMRISupply(const CBlock& block, CBlockIndex* pindex)
 {
     std::list<CZerocoinMint> listMints;
     bool fFilterInvalid = pindex->nHeight >= Params().Zerocoin_Block_RecalculateAccumulators();
@@ -3141,14 +3141,14 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     //A one-time event where money supply counts were off and recalculated on a certain block.
     if (pindex->nHeight == Params().Zerocoin_Block_RecalculateAccumulators() + 1) {
-        RecalculateZPIVMinted();
-        RecalculateZPIVSpent();
-        RecalculatePIVSupply(Params().Zerocoin_StartHeight());
+        RecalculateZMRIMinted();
+        RecalculateZMRISpent();
+        RecalculateMRISupply(Params().Zerocoin_StartHeight());
     }
 
-    //Track zPIV money supply in the block index
-    if (!UpdateZPIVSupply(block, pindex))
-        return state.DoS(100, error("%s: Failed to calculate new zPIV supply for block=%s height=%d", __func__,
+    //Track zMRI money supply in the block index
+    if (!UpdateZMRISupply(block, pindex))
+        return state.DoS(100, error("%s: Failed to calculate new zMRI supply for block=%s height=%d", __func__,
                                     block.GetHash().GetHex(), pindex->nHeight), REJECT_INVALID);
 
     // track money supply and mint amount info
@@ -3209,7 +3209,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         setDirtyBlockIndex.insert(pindex);
     }
 
-    //Record zPIV serials
+    //Record zMRI serials
     for (pair<CoinSpend, uint256> pSpend : vSpends) {
         //record spend to database
         if (!zerocoinDB->WriteCoinSpend(pSpend.first.getCoinSerialNumber(), pSpend.second))
@@ -3350,7 +3350,7 @@ void static UpdateTip(CBlockIndex* pindexNew)
 {
     chainActive.SetTip(pindexNew);
 
-    // If turned on AutoZeromint will automatically convert PIV to zPIV
+    // If turned on AutoZeromint will automatically convert MRI to zMRI
     if (pwalletMain->isZeromintEnabled ())
         pwalletMain->AutoZeromint ();
 

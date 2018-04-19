@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between mirai-cli and miraid)
- * of a given instance of the Pivx system.
+ * of a given instance of the Mirai system.
  */
 class CBaseChainParams
 {

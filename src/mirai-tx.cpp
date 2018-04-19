@@ -47,7 +47,7 @@ static bool AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || mapArgs.count("-?") || mapArgs.count("-help")) {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Pivx Core mirai-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("Mirai Core mirai-tx utility version") + " " + FormatFullVersion() + "\n\n" +
                                _("Usage:") + "\n" +
                                "  mirai-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded mirai transaction") + "\n" +
                                "  mirai-tx [options] -create [commands]   " + _("Create hex-encoded mirai transaction") + "\n" +
