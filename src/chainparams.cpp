@@ -152,7 +152,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1524078704;
+        genesis.nTime = 1524109999;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 22018586;
 
@@ -162,7 +162,7 @@ public:
         //printf("genesis.nVersion = %u \n", genesis.nVersion);
         //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str()); //first this, then comment this line out and uncomment the one under.
         //printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str()); //improvised. worked for me, to find merkle root
-         assert(hashGenesisBlock == uint256("0x26023ab353e633ca19ec8eacaeef40f27aa0310a5d0fb8e10d27cbc517b2c64b"));
+         assert(hashGenesisBlock == uint256("0x0b413e22ba8ada530502c83816da2c1ce8673dc0c9e6f3fd5fd10c668e65ea05"));
          assert(genesis.hashMerkleRoot == uint256("0x759231d966c09431e5098df49475bb79e09557fa32a84f589b1af11860491245"));
 
         //vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed.fuzzbawls.pw"));     // Primary DNS Seeder from Fuzzbawls
