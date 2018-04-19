@@ -112,9 +112,9 @@ public:
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 0;
+        nMinerThreads = 8;
         nTargetTimespan = 1 * 60; // MRI: 1 day
-        nTargetSpacing = 1 * 60;  // MRI: 1 minute
+        nTargetSpacing = 2 * 60;  // MRI: 1 minute
         nMaturity = 5;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 21000000 * COIN;
@@ -171,17 +171,11 @@ public:
         //vSeeds.push_back(CDNSSeedData("s3v3nh4cks.ddns.net", "s3v3nh4cks.ddns.net")); // Single node address
         //vSeeds.push_back(CDNSSeedData("178.254.23.111", "178.254.23.111"));           // Single node address
 
-        // mirai adresses start with 'M'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50);
-        // mirai script addresses start with '8'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 18);
-        // mirai private keys start with '8' or 'm'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 110);
-        // mirai BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // mirai BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        // BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
@@ -214,7 +208,7 @@ public:
         nZerocoinHeaderVersion = 4; //Block headers must be this version once zerocoin is active
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
         //Founders
-        founderAddress = "ComidaDePerro";
+        founderAddress = "MEeRiuHgFyYgTryK2kkacV6eZmnb1PRirW";
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
